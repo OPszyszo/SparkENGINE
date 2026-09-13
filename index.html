@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Download Spark Engine — Create. Build. Spark.</title>
-<meta name="description" content="Download Spark Engine for Windows, Linux, or Android. A visual game engine that makes creating and exporting games simple." />
+<meta name="description" content="Pobierz Spark Engine dla Windows lub Linux. Wizualny silnik gier, który pozwala tworzyć i eksportować gry w prosty sposób." />
 <meta name="theme-color" content="#06070c" />
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2l3.3 8.2 8.4 3.3-8.4 3.3L16 30l-3.3-13.2L4.3 13.5l8.4-3.3z' fill='%236d7cff'/%3E%3C/svg%3E" />
@@ -34,9 +34,10 @@
     </a>
 
     <nav class="nav-links" id="navLinks" aria-label="Main navigation">
-      <a href="#top" class="nav-link is-active">Home</a>
-      <a href="#download" class="nav-link">Download</a>
-      <a href="#platforms" class="nav-link">Platforms</a>
+      <a href="#top" class="nav-link is-active" data-scroll>Home</a>
+      <a href="#download" class="nav-link" data-scroll>Download</a>
+      <a href="#platforms" class="nav-link" data-scroll>Platforms</a>
+      <a href="#plus" class="nav-link" data-scroll>PLUS</a>
     </nav>
 
     <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
@@ -69,12 +70,12 @@
 
     <p class="hero-sub reveal" style="--d:.1s">
       A visual game engine that makes creating and exporting games simple.
-      Build once, run anywhere — Windows, Linux or Android.
+      Build once, run anywhere — Windows or Linux.
     </p>
 
     <div class="hero-actions reveal" style="--d:.15s">
-      <a href="#download" class="btn btn-primary btn-lg">Download Spark Engine</a>
-      <a href="#platforms" class="btn btn-ghost btn-lg">See supported platforms</a>
+      <a href="#download" class="btn btn-primary btn-lg" data-scroll>Download Spark Engine</a>
+      <a href="#plus" class="btn btn-ghost btn-lg" data-scroll>Explore Spark PLUS</a>
     </div>
 
     <p class="hero-note reveal" style="--d:.2s">
@@ -95,7 +96,7 @@
       <p class="section-sub">Pick your platform and install Spark Engine.</p>
     </div>
 
-    <div class="download-grid">
+    <div class="download-grid download-grid-2">
 
       <!-- Windows -->
       <div class="download-card reveal" style="--d:.02s">
@@ -127,21 +128,6 @@
         <span class="dl-note">Package link coming soon</span>
       </div>
 
-      <!-- Android -->
-      <div class="download-card reveal" style="--d:.1s">
-        <div class="dl-icon">
-          <svg viewBox="0 0 24 24" width="22" height="22">
-            <path fill="currentColor" d="M7 9h10v8.5a1.5 1.5 0 01-1.5 1.5h-7A1.5 1.5 0 017 17.5V9zm1.5-1V5.4A3.5 3.5 0 0112 2a3.5 3.5 0 013.5 3.4V8h-2V5.4A1.5 1.5 0 0012 4a1.5 1.5 0 00-1.5 1.4V8h-2zM4 10.5a1.5 1.5 0 013 0v5a1.5 1.5 0 01-3 0v-5zm13 0a1.5 1.5 0 013 0v5a1.5 1.5 0 01-3 0v-5z"/>
-          </svg>
-        </div>
-        <h3>Android</h3>
-        <p>Android 9+ · APK</p>
-        <a href="#" class="btn btn-ghost btn-block" data-placeholder-download="Android">
-          Get Android Version
-        </a>
-        <span class="dl-note">Play Store listing coming soon</span>
-      </div>
-
     </div>
 
     <p class="download-disclaimer reveal">
@@ -160,7 +146,7 @@
       <span class="eyebrow">Platforms</span>
       <h2>Build once. Export to your platform.</h2>
       <p class="section-sub">
-        Spark Engine projects target desktop and mobile from the same visual workspace.
+        Spark Engine projects target desktop from the same visual workspace.
       </p>
     </div>
 
@@ -178,15 +164,98 @@
         </svg>
         <span>Linux</span>
       </div>
-
-      <div class="platform-badge">
-        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-          <path fill="currentColor" d="M7 9h10v8.5a1.5 1.5 0 01-1.5 1.5h-7A1.5 1.5 0 017 17.5V9zm1.5-1V5.4A3.5 3.5 0 0112 2a3.5 3.5 0 013.5 3.4V8h-2V5.4A1.5 1.5 0 0012 4a1.5 1.5 0 00-1.5 1.4V8h-2zM4 10.5a1.5 1.5 0 013 0v5a1.5 1.5 0 01-3 0v-5zm13 0a1.5 1.5 0 013 0v5a1.5 1.5 0 01-3 0v-5z"/>
-        </svg>
-        <span>Android</span>
-      </div>
     </div>
 
+  </div>
+</section>
+
+<!-- =========================================================
+     SPARK PLUS
+     ========================================================= -->
+<section class="section plus-section" id="plus">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <span class="eyebrow eyebrow-plus">Spark PLUS</span>
+      <h2>Take your projects further.</h2>
+      <p class="section-sub">
+        Activate Spark PLUS with a code and unlock the full toolkit — for free.
+      </p>
+    </div>
+
+    <div class="plus-panel reveal">
+
+      <div class="plus-glow" aria-hidden="true"></div>
+
+      <!-- Left: features -->
+      <div class="plus-content">
+        <div class="plus-price">
+          <span class="plus-price-amount">$0.00</span>
+          <span class="plus-price-per">one-time · lifetime access</span>
+        </div>
+
+        <ul class="plus-list">
+          <li>Więcej skryptów i bloczków wizualnych</li>
+          <li>Usunięcie watermarku z eksportów</li>
+          <li>Gotowe projekty (szablony)</li>
+          <li>Priorytetowe aktualizacje</li>
+          <li>Dostęp do wszystkich przyszłych dodatków</li>
+        </ul>
+
+        <p class="plus-note">
+          Wpisz swój kod aktywacyjny poniżej, aby odblokować Spark PLUS.
+        </p>
+      </div>
+
+      <!-- Right: activation form -->
+      <div class="plus-activate">
+        <div class="plus-card">
+          <span class="plus-card-badge">PLUS</span>
+          <h3 class="plus-card-title">Aktywuj kod</h3>
+
+          <form id="plusForm" autocomplete="off" novalidate>
+            <label class="field-label">
+              <span>Kod aktywacyjny</span>
+              <input
+                type="text"
+                id="plusCode"
+                name="code"
+                placeholder="SPARK-XXXX-XXXX-XXXX"
+                spellcheck="false"
+                autocapitalize="characters"
+                required
+              />
+            </label>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              Aktywuj Spark PLUS
+            </button>
+
+            <p class="plus-hint">
+              Nie masz kodu? Zapisz się na listę oczekujących — wkrótce udostępnimy darmowe kody.
+            </p>
+          </form>
+
+          <!-- Status message (hidden by default) -->
+          <div class="plus-status" id="plusStatus" hidden></div>
+
+          <!-- Activated state -->
+          <div class="plus-activated" id="plusActivated" hidden>
+            <div class="plus-activated-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22">
+                <path fill="currentColor" d="M9.5 16.6l-3.6-3.6 1.4-1.4 2.2 2.2 5.7-5.7 1.4 1.4z"/>
+              </svg>
+            </div>
+            <h3>Spark PLUS aktywowany</h3>
+            <p>Wszystkie funkcje PLUS są teraz dostępne w Twoim silniku.</p>
+            <button type="button" class="btn btn-ghost btn-block" id="plusReset">
+              Dezaktywuj (test)
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -198,7 +267,7 @@
 <footer class="footer">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <a href="#top" class="brand">
+      <a href="#top" class="brand" data-scroll>
         <span class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 24 24" width="15" height="15">
             <path d="M12 2.2l2.5 6.3 6.3 2.5-6.3 2.5L12 21.8l-2.5-8.3L3.2 11l6.3-2.5z" fill="#fff"/>
@@ -210,8 +279,9 @@
     </div>
 
     <nav class="footer-links" aria-label="Footer">
-      <a href="#download">Download</a>
-      <a href="#platforms">Platforms</a>
+      <a href="#download" data-scroll>Download</a>
+      <a href="#platforms" data-scroll>Platforms</a>
+      <a href="#plus" data-scroll>Spark PLUS</a>
       <a href="#terms">Terms</a>
       <a href="#privacy">Privacy</a>
       <a href="#discord">Discord</a>
