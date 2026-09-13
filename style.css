@@ -1,28 +1,9 @@
 /* =========================================================
-   Spark Engine — style.css (download-only site)
-   ---------------------------------------------------------
-   1.  Design tokens
-   2.  Reset & base
-   3.  Layout utilities
-   4.  Buttons & pills
-   5.  Navbar
-   6.  Hero
-   7.  Download section
-   8.  Platforms section
-   9.  Footer
-   10. Toast
-   11. Animations
-   12. Responsive
+   Spark Engine — style.css
    ========================================================= */
 
-
-/* =========================================================
-   1. DESIGN TOKENS
-   ========================================================= */
 :root{
   --bg:            #06070c;
-  --bg-soft:       #090b13;
-
   --surface:       rgba(255,255,255,.035);
   --border:        rgba(255,255,255,.08);
   --border-2:      rgba(255,255,255,.13);
@@ -40,25 +21,15 @@
   --grad:          linear-gradient(115deg,#4d7cfe 0%,#8b5cf6 52%,#c084fc 100%);
 
   --radius:        16px;
-
   --maxw:          1100px;
   --nav-h:         72px;
-
-  --shadow-lg:     0 30px 80px -40px rgba(0,0,0,.9);
 
   --ease:          cubic-bezier(.22,.68,.32,1);
 }
 
-
-/* =========================================================
-   2. RESET & BASE
-   ========================================================= */
-*,
-*::before,
-*::after{ box-sizing:border-box; }
+*, *::before, *::after{ box-sizing:border-box; }
 
 html{
-  scroll-behavior:smooth;
   scroll-padding-top:calc(var(--nav-h) + 18px);
   -webkit-text-size-adjust:100%;
 }
@@ -83,24 +54,16 @@ h1,h2,h3{
   margin:0;
   color:#fff;
 }
-
 h1{ font-size:clamp(2.4rem,5.4vw,4rem); font-weight:700; letter-spacing:-.035em; }
 h2{ font-size:clamp(1.7rem,3vw,2.4rem); }
 h3{ font-size:1.06rem; letter-spacing:-.012em; }
 
 p{ margin:0; }
 a{ color:inherit; text-decoration:none; }
-
-button{
-  font:inherit;
-  color:inherit;
-  background:none;
-  border:none;
-  cursor:pointer;
-}
-
+button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
 ul{ margin:0; padding:0; list-style:none; }
 svg{ display:block; max-width:100%; }
+input{ font:inherit; }
 
 ::selection{ background:rgba(139,92,246,.4); color:#fff; }
 
@@ -115,10 +78,7 @@ svg{ display:block; max-width:100%; }
   ::-webkit-scrollbar-thumb:hover{ background:rgba(255,255,255,.2); }
 }
 
-
-/* =========================================================
-   3. LAYOUT UTILITIES
-   ========================================================= */
+/* Layout */
 .container{
   width:100%;
   max-width:var(--maxw);
@@ -144,7 +104,6 @@ svg{ display:block; max-width:100%; }
   margin:0 auto clamp(34px,5vw,54px);
   text-align:center;
 }
-
 .section-head h2{ margin-bottom:14px; }
 
 .section-sub{
@@ -172,10 +131,7 @@ svg{ display:block; max-width:100%; }
   animation:gradShift 9s ease-in-out infinite;
 }
 
-
-/* =========================================================
-   4. BUTTONS & PILLS
-   ========================================================= */
+/* Buttons */
 .btn{
   position:relative;
   display:inline-flex;
@@ -192,7 +148,6 @@ svg{ display:block; max-width:100%; }
              background-color .28s var(--ease), border-color .28s var(--ease),
              color .28s var(--ease);
 }
-
 .btn-lg{ padding:15px 28px; font-size:.98rem; border-radius:14px; }
 .btn-block{ width:100%; }
 
@@ -222,10 +177,7 @@ svg{ display:block; max-width:100%; }
 }
 
 .btn:focus-visible,
-.nav-link:focus-visible{
-  outline:2px solid var(--indigo);
-  outline-offset:3px;
-}
+.nav-link:focus-visible{ outline:2px solid var(--indigo); outline-offset:3px; }
 
 .pill{
   display:inline-flex;
@@ -248,10 +200,7 @@ svg{ display:block; max-width:100%; }
   animation:pulseDot 2.4s ease-in-out infinite;
 }
 
-
-/* =========================================================
-   5. NAVBAR
-   ========================================================= */
+/* Navbar */
 .nav{
   position:fixed;
   inset:0 0 auto 0;
@@ -261,14 +210,12 @@ svg{ display:block; max-width:100%; }
              border-color .35s var(--ease),
              backdrop-filter .35s var(--ease);
 }
-
 .nav.is-scrolled{
   background:rgba(8,9,15,.74);
   -webkit-backdrop-filter:blur(20px) saturate(150%);
   backdrop-filter:blur(20px) saturate(150%);
   border-bottom-color:var(--border);
 }
-
 .nav-inner{
   width:100%;
   max-width:var(--maxw);
@@ -279,7 +226,6 @@ svg{ display:block; max-width:100%; }
   align-items:center;
   gap:26px;
 }
-
 .brand{
   display:inline-flex;
   align-items:center;
@@ -291,7 +237,6 @@ svg{ display:block; max-width:100%; }
   color:#fff;
   flex-shrink:0;
 }
-
 .brand-mark{
   width:30px; height:30px;
   display:grid;
@@ -304,14 +249,12 @@ svg{ display:block; max-width:100%; }
   animation:gradShift 8s ease-in-out infinite;
   flex-shrink:0;
 }
-
 .nav-links{
   display:flex;
   align-items:center;
   gap:2px;
   margin-left:auto;
 }
-
 .nav-link{
   position:relative;
   padding:8px 13px;
@@ -322,7 +265,6 @@ svg{ display:block; max-width:100%; }
   transition:color .25s var(--ease), background-color .25s var(--ease);
 }
 .nav-link:hover{ color:#fff; background:rgba(255,255,255,.05); }
-
 .nav-link.is-active{ color:#fff; }
 .nav-link.is-active::after{
   content:'';
@@ -355,29 +297,18 @@ svg{ display:block; max-width:100%; }
 .hamburger span:nth-child(1){ top:14px; }
 .hamburger span:nth-child(2){ top:20px; }
 .hamburger span:nth-child(3){ top:26px; }
-
 .hamburger.is-open span:nth-child(1){ transform:translateY(6px) rotate(45deg); }
 .hamburger.is-open span:nth-child(2){ opacity:0; }
 .hamburger.is-open span:nth-child(3){ transform:translateY(-6px) rotate(-45deg); }
 
-
-/* =========================================================
-   6. HERO
-   ========================================================= */
+/* Hero */
 .hero{
   position:relative;
   padding:calc(var(--nav-h) + 90px) 0 90px;
   overflow:hidden;
   text-align:center;
 }
-
-.hero-bg{
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  z-index:0;
-}
-
+.hero-bg{ position:absolute; inset:0; pointer-events:none; z-index:0; }
 .grid-overlay{
   position:absolute;
   inset:0;
@@ -388,7 +319,6 @@ svg{ display:block; max-width:100%; }
   -webkit-mask-image:radial-gradient(ellipse 85% 62% at 50% 4%, #000 10%, transparent 78%);
   mask-image:radial-gradient(ellipse 85% 62% at 50% 4%, #000 10%, transparent 78%);
 }
-
 .glow{
   position:absolute;
   border-radius:50%;
@@ -407,16 +337,13 @@ svg{ display:block; max-width:100%; }
   background:radial-gradient(circle, rgba(139,92,246,.45), transparent 66%);
   animation:floatSlow 20s ease-in-out infinite reverse;
 }
-
 .hero-inner{
   position:relative;
   z-index:1;
   max-width:780px;
   margin-inline:auto;
 }
-
 .hero-title{ margin-bottom:22px; }
-
 .hero-sub{
   font-size:clamp(1.02rem,1.35vw,1.16rem);
   color:var(--text-soft);
@@ -424,7 +351,6 @@ svg{ display:block; max-width:100%; }
   max-width:560px;
   margin:0 auto 34px;
 }
-
 .hero-actions{
   display:flex;
   flex-wrap:wrap;
@@ -432,26 +358,20 @@ svg{ display:block; max-width:100%; }
   gap:14px;
   margin-bottom:20px;
 }
+.hero-note{ font-size:.83rem; color:var(--muted-2); }
 
-.hero-note{
-  font-size:.83rem;
-  color:var(--muted-2);
-}
-
-
-/* =========================================================
-   7. DOWNLOAD SECTION
-   ========================================================= */
-.download-section{
-  padding-top:clamp(40px,5vw,60px);
-}
-
+/* Download */
+.download-section{ padding-top:clamp(40px,5vw,60px); }
 .download-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
   gap:18px;
 }
-
+.download-grid-2{
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  max-width:760px;
+  margin-inline:auto;
+}
 .download-card{
   display:flex;
   flex-direction:column;
@@ -468,7 +388,6 @@ svg{ display:block; max-width:100%; }
   border-color:rgba(139,92,246,.35);
   box-shadow:0 30px 70px -45px rgba(109,124,255,.95);
 }
-
 .dl-icon{
   width:46px; height:46px;
   display:grid;
@@ -486,13 +405,8 @@ svg{ display:block; max-width:100%; }
   box-shadow:0 0 26px -6px rgba(109,124,255,.95),
              inset 0 1px 0 rgba(255,255,255,.14);
 }
-
 .download-card h3{ margin-bottom:5px; }
-.download-card p{
-  font-size:.85rem;
-  color:var(--muted);
-  margin-bottom:22px;
-}
+.download-card p{ font-size:.85rem; color:var(--muted); margin-bottom:22px; }
 .download-card .btn{ margin-top:auto; }
 
 .dl-note{
@@ -504,7 +418,6 @@ svg{ display:block; max-width:100%; }
   text-align:center;
   letter-spacing:.02em;
 }
-
 .download-disclaimer{
   margin-top:26px;
   text-align:center;
@@ -512,17 +425,13 @@ svg{ display:block; max-width:100%; }
   color:var(--muted-2);
 }
 
-
-/* =========================================================
-   8. PLATFORMS SECTION
-   ========================================================= */
+/* Platforms */
 .platform-badges{
   display:flex;
   justify-content:center;
   flex-wrap:wrap;
   gap:14px;
 }
-
 .platform-badge{
   display:inline-flex;
   align-items:center;
@@ -539,7 +448,6 @@ svg{ display:block; max-width:100%; }
              border-color .3s var(--ease), box-shadow .3s var(--ease);
 }
 .platform-badge svg{ color:var(--indigo); transition:color .3s var(--ease); }
-
 .platform-badge:hover{
   transform:translateY(-3px);
   color:#fff;
@@ -548,10 +456,236 @@ svg{ display:block; max-width:100%; }
 }
 .platform-badge:hover svg{ color:var(--pink); }
 
+/* Spark PLUS */
+.plus-section{ padding-top:clamp(40px,5vw,70px); }
 
-/* =========================================================
-   9. FOOTER
-   ========================================================= */
+.eyebrow-plus{
+  color:#d7bcff;
+  background:linear-gradient(115deg, rgba(77,124,254,.3), rgba(192,132,252,.3));
+  border:1px solid rgba(192,132,252,.32);
+  padding:5px 12px;
+  border-radius:100px;
+  font-size:.68rem;
+  letter-spacing:.16em;
+}
+
+.plus-panel{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
+  gap:48px;
+  align-items:center;
+  padding:clamp(32px,4.5vw,56px);
+  border-radius:24px;
+  border:1px solid rgba(139,92,246,.28);
+  background:
+    radial-gradient(120% 140% at 8% 0%, rgba(77,124,254,.16), transparent 58%),
+    radial-gradient(110% 130% at 100% 100%, rgba(192,132,252,.15), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.014));
+  overflow:hidden;
+  -webkit-backdrop-filter:blur(16px);
+  backdrop-filter:blur(16px);
+  box-shadow:0 50px 120px -70px rgba(109,124,255,.95);
+}
+.plus-glow{
+  position:absolute;
+  top:-40%; left:-10%;
+  width:60%; height:180%;
+  background:radial-gradient(circle, rgba(139,92,246,.24), transparent 65%);
+  filter:blur(70px);
+  pointer-events:none;
+  animation:floatSlow 14s ease-in-out infinite;
+}
+.plus-content{ position:relative; z-index:1; }
+
+.plus-price{
+  display:flex;
+  align-items:baseline;
+  gap:14px;
+  margin-bottom:22px;
+  flex-wrap:wrap;
+}
+.plus-price-amount{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(2.4rem,4vw,3.2rem);
+  font-weight:700;
+  letter-spacing:-.04em;
+  line-height:1;
+  background:var(--grad);
+  background-size:200% 200%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  animation:gradShift 9s ease-in-out infinite;
+}
+.plus-price-per{
+  font-size:.85rem;
+  font-weight:500;
+  color:var(--muted);
+  letter-spacing:.02em;
+}
+
+.plus-list{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:11px;
+  margin-bottom:22px;
+  max-width:520px;
+}
+.plus-list li{
+  position:relative;
+  padding-left:28px;
+  font-size:.93rem;
+  color:var(--text-soft);
+  line-height:1.55;
+}
+.plus-list li::before{
+  content:'';
+  position:absolute;
+  left:0; top:.35em;
+  width:16px; height:16px;
+  border-radius:50%;
+  background:var(--grad);
+  box-shadow:0 0 14px -2px rgba(139,92,246,.95);
+}
+.plus-list li::after{
+  content:'';
+  position:absolute;
+  left:4.5px; top:.6em;
+  width:7px; height:4px;
+  border-left:2px solid #fff;
+  border-bottom:2px solid #fff;
+  transform:rotate(-45deg);
+}
+
+.plus-note{
+  font-size:.85rem;
+  color:var(--muted);
+  max-width:480px;
+}
+
+/* Activation card */
+.plus-activate{ position:relative; z-index:1; display:flex; justify-content:center; }
+
+.plus-card{
+  width:100%;
+  max-width:340px;
+  padding:26px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.11);
+  background:linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.02));
+  -webkit-backdrop-filter:blur(14px);
+  backdrop-filter:blur(14px);
+  box-shadow:0 40px 90px -50px rgba(0,0,0,1);
+  transition:transform .5s var(--ease);
+}
+.plus-card:hover{ transform:translateY(-4px); }
+
+.plus-card-badge{
+  display:inline-block;
+  padding:4px 11px;
+  border-radius:7px;
+  font-size:.64rem;
+  font-weight:700;
+  letter-spacing:.18em;
+  color:#fff;
+  background:var(--grad);
+  box-shadow:0 0 20px -4px rgba(139,92,246,.95);
+  margin-bottom:16px;
+}
+.plus-card-title{ font-size:1.05rem; margin-bottom:18px; }
+
+.field-label{ display:block; margin-bottom:14px; }
+.field-label span{
+  display:block;
+  font-size:.78rem;
+  font-weight:600;
+  letter-spacing:.03em;
+  color:var(--text-soft);
+  margin-bottom:7px;
+}
+.field-label input{
+  width:100%;
+  padding:12px 14px;
+  border-radius:11px;
+  border:1px solid var(--border-2);
+  background:rgba(255,255,255,.035);
+  color:var(--text);
+  font-size:.94rem;
+  font-family:'Space Grotesk','Inter',monospace;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  transition:border-color .25s var(--ease), box-shadow .25s var(--ease),
+             background-color .25s var(--ease);
+}
+.field-label input::placeholder{
+  color:var(--muted-2);
+  text-transform:none;
+  letter-spacing:.02em;
+  font-family:'Inter',sans-serif;
+}
+.field-label input:focus{
+  outline:none;
+  border-color:rgba(139,92,246,.6);
+  background:rgba(255,255,255,.055);
+  box-shadow:0 0 0 4px rgba(139,92,246,.14);
+}
+
+.plus-hint{
+  margin-top:14px;
+  font-size:.75rem;
+  color:var(--muted-2);
+  line-height:1.55;
+  text-align:center;
+}
+
+.plus-status{
+  margin-top:16px;
+  padding:11px 14px;
+  border-radius:11px;
+  font-size:.83rem;
+  line-height:1.5;
+  text-align:center;
+}
+.plus-status[hidden]{ display:none; }
+.plus-status.is-error{
+  color:#ffd3d3;
+  background:rgba(255,110,110,.1);
+  border:1px solid rgba(255,110,110,.3);
+}
+.plus-status.is-success{
+  color:#d3ffe8;
+  background:rgba(94,233,160,.1);
+  border:1px solid rgba(94,233,160,.3);
+}
+
+.plus-activated{
+  margin-top:16px;
+  padding:22px 18px;
+  border-radius:14px;
+  text-align:center;
+  background:linear-gradient(180deg, rgba(94,233,160,.09), rgba(94,233,160,.03));
+  border:1px solid rgba(94,233,160,.28);
+}
+.plus-activated[hidden]{ display:none; }
+.plus-activated-icon{
+  width:46px; height:46px;
+  margin:0 auto 12px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  color:#fff;
+  background:linear-gradient(135deg,#34d399,#10b981);
+  box-shadow:0 0 22px -4px rgba(52,211,153,.9);
+}
+.plus-activated h3{ margin-bottom:6px; font-size:.98rem; }
+.plus-activated p{
+  font-size:.83rem;
+  color:var(--text-soft);
+  margin-bottom:14px;
+}
+
+/* Footer */
 .footer{
   border-top:1px solid var(--border);
   background:
@@ -559,7 +693,6 @@ svg{ display:block; max-width:100%; }
     #05060a;
   padding-top:56px;
 }
-
 .footer-inner{
   display:flex;
   flex-wrap:wrap;
@@ -567,7 +700,6 @@ svg{ display:block; max-width:100%; }
   gap:36px;
   padding-bottom:40px;
 }
-
 .footer-brand .brand{ margin-bottom:14px; }
 .footer-tagline{
   font-family:'Space Grotesk',sans-serif;
@@ -580,7 +712,6 @@ svg{ display:block; max-width:100%; }
   color:transparent;
   animation:gradShift 9s ease-in-out infinite;
 }
-
 .footer-links{
   display:flex;
   flex-wrap:wrap;
@@ -594,21 +725,14 @@ svg{ display:block; max-width:100%; }
   transition:color .25s var(--ease);
 }
 .footer-links a:hover{ color:#fff; }
-
 .footer-bottom{
   border-top:1px solid rgba(255,255,255,.055);
   padding-top:22px;
   padding-bottom:28px;
 }
-.footer-bottom p{
-  font-size:.8rem;
-  color:var(--muted-2);
-}
+.footer-bottom p{ font-size:.8rem; color:var(--muted-2); }
 
-
-/* =========================================================
-   10. TOAST
-   ========================================================= */
+/* Toast */
 .toast{
   position:fixed;
   left:50%;
@@ -632,20 +756,15 @@ svg{ display:block; max-width:100%; }
 .toast[hidden]{ display:none; }
 .toast.is-visible{ opacity:1; transform:translate(-50%,0); }
 
-
-/* =========================================================
-   11. ANIMATIONS
-   ========================================================= */
+/* Animations */
 @keyframes gradShift{
   0%,100%{ background-position:0% 50%; }
   50%    { background-position:100% 50%; }
 }
-
 @keyframes floatSlow{
   0%,100%{ transform:translate3d(0,0,0); }
   50%    { transform:translate3d(0,-26px,0); }
 }
-
 @keyframes pulseDot{
   0%,100%{ opacity:1;   transform:scale(1); }
   50%    { opacity:.55; transform:scale(.82); }
@@ -675,10 +794,7 @@ svg{ display:block; max-width:100%; }
   .reveal{ opacity:1; transform:none; }
 }
 
-
-/* =========================================================
-   12. RESPONSIVE
-   ========================================================= */
+/* Responsive */
 @media (max-width:920px){
   :root{ --nav-h:66px; }
 
@@ -695,7 +811,6 @@ svg{ display:block; max-width:100%; }
     backdrop-filter:blur(22px);
     border-bottom:1px solid var(--border);
     box-shadow:0 40px 70px -40px rgba(0,0,0,1);
-
     opacity:0;
     visibility:hidden;
     transform:translateY(-14px);
@@ -709,7 +824,6 @@ svg{ display:block; max-width:100%; }
     visibility:visible;
     transform:translateY(0);
   }
-
   .nav-link{
     padding:13px 14px;
     font-size:.98rem;
@@ -717,8 +831,13 @@ svg{ display:block; max-width:100%; }
   }
   .nav-link.is-active::after{ display:none; }
   .nav-link.is-active{ background:rgba(255,255,255,.06); }
-
   .hamburger{ display:block; }
+
+  .plus-panel{
+    grid-template-columns:1fr;
+    gap:36px;
+  }
+  .plus-activate{ justify-content:flex-start; }
 }
 
 @media (max-width:720px){
@@ -730,22 +849,18 @@ svg{ display:block; max-width:100%; }
 
 @media (max-width:560px){
   .hero-title{ font-size:clamp(2rem,8.5vw,2.5rem); }
-
   .hero-actions{ flex-direction:column; align-items:stretch; }
   .hero-actions .btn{ width:100%; }
-
   .platform-badge{
     padding:11px 18px;
     font-size:.85rem;
     flex:1 1 100%;
     justify-content:center;
   }
-
   .section-head{ text-align:left; }
-
   .download-card{ padding:26px 22px 24px; }
-
   .toast{ bottom:18px; }
+  .plus-price-amount{ font-size:2.2rem; }
 }
 
 @media (max-width:380px){
